@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Terms and Conditions">
+	<main>
+		<h1>Terms and Conditions</h1>
+		<p class="updated">Last updated: February 4, 2026</p>
+
+		<section>
+			<h2>1. Acceptance of Terms</h2>
+			<p>By accessing or using this application, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the service. Your continued use of the application following any changes to these terms constitutes acceptance of the updated terms.</p>
+		</section>
+
+		<section>
+			<h2>2. What This Service Does</h2>
+			<p>This application takes email templates exported from Canva and converts them into a format that is compatible with Microsoft Outlook. The conversion process optimises the HTML and inline styles produced by Canva to improve rendering fidelity within Outlook's email engine.</p>
+			<p>As part of the conversion, any images referenced in your email template are uploaded to Cloudinary, a third-party image hosting service. The <code>img src</code> attributes in the converted HTML are then updated to point to the Cloudinary CDN URLs. This ensures images load reliably when the email is sent via Outlook or any other email client.</p>
+			<p>This service does not alter the content, copy, or branding of your email template beyond the image URL replacement described above.</p>
+		</section>
+
+		<section>
+			<h2>3. Canva Terms of Service</h2>
+			<p>This application is not affiliated with, endorsed by, or a product of Canva Pty Ltd. You must independently comply with <a href="https://www.canva.com/policies/terms-of-use/" target="_blank" rel="noopener noreferrer">Canva's Terms of Service</a> when creating and exporting your email designs. Any violation of Canva's terms is your sole responsibility.</p>
+			<p>The Canva logo and any other Canva trademarks are the property of Canva Pty Ltd. Use of these trademarks within this application does not imply any endorsement or affiliation.</p>
+		</section>
+
+		<section>
+			<h2>4. Intellectual Property</h2>
+			<p>You retain full ownership of any email designs you create in Canva and upload to this application. We do not claim any intellectual property rights over your designs or content.</p>
+			<p>The conversion tool itself, including its code and processes, is our intellectual property. You may not reverse-engineer, copy, or redistribute the application without our prior written consent.</p>
+		</section>
+
+		<section>
+			<h2>5. No Guarantee of Rendering</h2>
+			<p>Microsoft Outlook uses a non-standard HTML and CSS rendering engine that differs significantly from web browsers. While this application is designed to produce output that renders as closely as possible to your original Canva design, we cannot guarantee pixel-perfect results across all versions of Outlook or other email clients.</p>
+			<p>We recommend previewing your converted email in your target email client before sending. Minor visual differences in layout, spacing, fonts, or colours may occur and are outside our control.</p>
+		</section>
+
+		<section>
+			<h2>6. Data Handling</h2>
+			<p>When you upload an email template, we process the HTML file solely for the purpose of performing the conversion. The HTML file itself is not retained after conversion is complete.</p>
+			<p>However, any images contained in your template are uploaded to and stored on <strong>Cloudinary</strong>, a third-party image hosting service, so that they can be referenced via a public CDN URL in the converted email. These images will be publicly accessible via their Cloudinary URL. You should not upload any images that you do not want to be publicly visible, including private, confidential, or sensitive material.</p>
+			<p>We do not use your content for advertising, analytics, or any purpose other than hosting it for use in your converted email.</p>
+		</section>
+
+		<section>
+			<h2>7. Limitation of Liability</h2>
+			<p>To the extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of this application. This includes, but is not limited to, any issues arising from differences in how converted emails render in Outlook or other email clients, or from any interaction between your Canva design and the conversion process.</p>
+			<p>Our total liability shall not exceed the amount you have paid to use this service, if any.</p>
+		</section>
+
+		<section>
+			<h2>8. Disclaimer of Warranties</h2>
+			<p>This application is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not warrant that the application will be uninterrupted, error-free, or that the converted output will meet your specific requirements.</p>
+		</section>
+
+		<section>
+			<h2>9. Changes to Terms</h2>
+			<p>We reserve the right to modify these Terms and Conditions at any time. Changes will be posted on this page with an updated date. Continued use of the application after changes constitutes acceptance of the new terms.</p>
+		</section>
+
+		<section>
+			<h2>10. Contact Us</h2>
+			<p>If you have questions about these Terms and Conditions or need support with the application, <a href="/contact">send us a message</a>.</p>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: var(--width-content);
+		margin: 0 auto;
+		padding: var(--space-12) var(--space-4);
+	}
+
+	h1 {
+		font-size: var(--text-4xl);
+		margin-bottom: var(--space-2);
+	}
+
+	.updated {
+		color: var(--color-text-muted);
+		font-size: var(--text-sm);
+		margin-bottom: var(--space-8);
+	}
+
+	section {
+		margin-bottom: var(--space-8);
+	}
+
+	h2 {
+		font-size: var(--text-xl);
+		margin-bottom: var(--space-3);
+	}
+
+	p {
+		font-size: var(--text-base);
+		line-height: 1.6;
+		color: var(--color-text-muted);
+	}
+</style>

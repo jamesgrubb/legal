@@ -1,17 +1,33 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Canva To Outlook">
+	<main>
+		<h1>Canva To Outlook</h1>
+		<p class="description">Convert your Canva email designs into Outlook-friendly HTML — no coding required.</p>
+
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: var(--width-content);
+		margin: 0 auto;
+		padding: var(--space-16) var(--space-4);
+		text-align: center;
+	}
+
+	h1 {
+		font-size: var(--text-4xl);
+		margin-bottom: var(--space-4);
+	}
+
+	.description {
+		font-size: var(--text-lg);
+		color: var(--color-text-muted);
+		line-height: 1.6;
+		max-width: 36rem;
+		margin: 0 auto;
+	}
+</style>

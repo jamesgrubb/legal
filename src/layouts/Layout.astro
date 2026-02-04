@@ -1,0 +1,65 @@
+---
+import { Font } from 'astro:assets';
+import Nav from '../components/Nav.astro';
+
+const { title = 'Astro' } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<Font cssVariable="--font-inter" preload />
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<style is:global>
+			:root {
+				/* Colors */
+				--color-bg: #ffffff;
+				--color-bg-subtle: #f4f4f5;
+				--color-surface: #e4e4e7;
+				--color-text: #09090b;
+				--color-text-muted: #71717a;
+				--color-primary: #3b82f6;
+				--color-primary-hover: #2563eb;
+				--color-accent: #8b5cf6;
+				--color-border: #d4d4d8;
+				--color-error: #ef4444;
+				--color-success: #22c55e;
+
+				/* Spacing (4px base) */
+				--space-1: 0.25rem;
+				--space-2: 0.5rem;
+				--space-3: 0.75rem;
+				--space-4: 1rem;
+				--space-6: 1.5rem;
+				--space-8: 2rem;
+				--space-12: 3rem;
+				--space-16: 4rem;
+
+				/* Sizes */
+				--text-xs: 0.75rem;
+				--text-sm: 0.875rem;
+				--text-base: 1rem;
+				--text-lg: 1.125rem;
+				--text-xl: 1.25rem;
+				--text-2xl: 1.5rem;
+				--text-3xl: 1.875rem;
+				--text-4xl: 2.25rem;
+				--width-content: 72rem;
+			}
+
+			body {
+				font-family: var(--font-inter);
+				color: var(--color-text);
+				background-color: var(--color-bg-subtle);
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<slot />
+	</body>
+</html>

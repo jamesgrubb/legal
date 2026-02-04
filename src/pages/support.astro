@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Support">
+	<main>
+		<h1>Support</h1>
+		<p class="intro">Need help with the Canva to Outlook conversion tool? Find answers to common questions below or get in touch with us directly.</p>
+
+		<section>
+			<h2>How to Use the Tool</h2>
+			<ol>
+				<li>Design your email template in Canva.</li>
+				<li>Export your design as an <strong>HTML</strong> file from Canva.</li>
+				<li>Upload the exported HTML file to this tool.</li>
+				<li>Download the converted, Outlook-compatible version.</li>
+				<li>Preview the output in Outlook before sending.</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Common Issues</h2>
+
+			<h3>My converted email looks different in Outlook</h3>
+			<p>Outlook uses a non-standard rendering engine that handles HTML and CSS differently to web browsers. Minor differences in spacing, fonts, or layout are common. We recommend always previewing your converted email in Outlook before sending. If differences are significant, try simplifying your Canva template — single-column layouts and basic styling tend to convert most reliably.</p>
+
+			<h3>My images are not showing</h3>
+			<p>Outlook blocks images by default until the recipient opts in. Make sure your images are hosted on a publicly accessible URL rather than embedded as local files. Canva-hosted image links should work provided they remain active after export.</p>
+
+			<h3>My fonts are not displaying correctly</h3>
+			<p>Outlook has limited font support. If your Canva template uses a custom or Google Font, it will likely fall back to a system font in Outlook. Stick to web-safe fonts such as Arial, Helvetica, or Verdana for the most consistent results.</p>
+
+			<h3>The layout has broken into multiple lines</h3>
+			<p>Multi-column layouts are one of the most common sources of rendering issues in Outlook. If your template uses side-by-side sections, try converting to a single-column layout in Canva before exporting.</p>
+
+			<h3>My background colours or images are missing</h3>
+			<p>Outlook does not support CSS background properties on most elements. Background colours on table cells are supported, but full-bleed background images are not. Consider using a solid colour background as a fallback.</p>
+		</section>
+
+		<section>
+			<h2>Tips for Better Results</h2>
+			<ul>
+				<li>Use <strong>single-column layouts</strong> where possible.</li>
+				<li>Stick to <strong>web-safe fonts</strong> (Arial, Helvetica, Verdana).</li>
+				<li>Host all images on <strong>publicly accessible URLs</strong>.</li>
+				<li>Avoid CSS features like <code>flexbox</code>, <code>grid</code>, or <code>media queries</code> in your Canva design.</li>
+				<li>Always <strong>preview in Outlook</strong> before sending.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Contact Us</h2>
+			<p>If the above doesn't resolve your issue, <a href="/contact">send us a message</a> and we'll be happy to help.</p>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: var(--width-content);
+		margin: 0 auto;
+		padding: var(--space-12) var(--space-4);
+	}
+
+	h1 {
+		font-size: var(--text-4xl);
+		margin-bottom: var(--space-2);
+	}
+
+	.intro {
+		font-size: var(--text-lg);
+		color: var(--color-text-muted);
+		margin-bottom: var(--space-8);
+		line-height: 1.6;
+	}
+
+	section {
+		margin-bottom: var(--space-12);
+	}
+
+	h2 {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-4);
+		padding-bottom: var(--space-2);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	h3 {
+		font-size: var(--text-lg);
+		margin-top: var(--space-6);
+		margin-bottom: var(--space-2);
+	}
+
+	p {
+		font-size: var(--text-base);
+		line-height: 1.6;
+		color: var(--color-text-muted);
+	}
+
+	ol, ul {
+		margin: var(--space-3) 0 var(--space-3) var(--space-6);
+		font-size: var(--text-base);
+		line-height: 2;
+		color: var(--color-text-muted);
+	}
+
+	code {
+		font-size: var(--text-sm);
+		background-color: var(--color-surface);
+		padding: 0.15em 0.4em;
+		border-radius: 0.25rem;
+	}
+</style>
