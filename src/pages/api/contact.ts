@@ -1,4 +1,3 @@
-import { Resend } from 'resend';
 import type { APIRoute } from 'astro';
 
 export const prerender = false;
@@ -34,17 +33,22 @@ export const POST: APIRoute = async ({ request }) => {
 		});
 	}
 
-	const resend = new Resend(apiKey);
-
-	const { error } = await resend.emails.send({
-		from: fromEmail,
-		to: [toEmail],
-		replyTo: email,
-		subject: `Contact: ${name}`,
-		text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+	const res = await fetch('https://api.resend.com/emails', {
+		method: 'POST',
+		headers: {
+			Authorization: `Bearer ${apiKey}`,
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			from: fromEmail,
+			to: [toEmail],
+			replyTo: email,
+			subject: `Contact: ${name}`,
+			text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+		}),
 	});
 
-	if (error) {
+	if (!res.ok) {
 		return new Response(JSON.stringify({ error: 'Failed to send message.' }), {
 			status: 500,
 			headers: { 'Content-Type': 'application/json' },
