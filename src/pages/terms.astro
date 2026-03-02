@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Terms and Conditions">
+<Layout title="Terms and Conditions - Mailbridge">
 	<main>
 		<h1>Terms and Conditions</h1>
 		<p class="updated">Last updated: February 4, 2026</p>
@@ -14,8 +14,8 @@ import Layout from '../layouts/Layout.astro';
 
 		<section>
 			<h2>2. What This Service Does</h2>
-			<p>This application takes email templates exported from Canva and converts them into a format that is compatible with Microsoft Outlook. The conversion process optimises the HTML and inline styles produced by Canva to improve rendering fidelity within Outlook's email engine.</p>
-			<p>As part of the conversion, any images referenced in your email template are uploaded to Cloudinary, a third-party image hosting service. The <code>img src</code> attributes in the converted HTML are then updated to point to the Cloudinary CDN URLs. This ensures images load reliably when the email is sent via Outlook or any other email client.</p>
+			<p>This application takes email templates exported from Canva and converts them into a format that is compatible with email clients. The conversion process optimises the HTML and inline styles produced by Canva to improve rendering fidelity within email client rendering engines.</p>
+			<p>As part of the conversion, any images referenced in your email template are uploaded to Cloudinary, a third-party image hosting service. The <code>img src</code> attributes in the converted HTML are then updated to point to the Cloudinary CDN URLs. This ensures images load reliably when the email is sent via any email client.</p>
 			<p>This service does not alter the content, copy, or branding of your email template beyond the image URL replacement described above.</p>
 		</section>
 
@@ -33,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
 
 		<section>
 			<h2>5. No Guarantee of Rendering</h2>
-			<p>Microsoft Outlook uses a non-standard HTML and CSS rendering engine that differs significantly from web browsers. While this application is designed to produce output that renders as closely as possible to your original Canva design, we cannot guarantee pixel-perfect results across all versions of Outlook or other email clients.</p>
+			<p>Many email clients use non-standard HTML and CSS rendering engines that differ significantly from web browsers. While this application is designed to produce output that renders as closely as possible to your original Canva design, we cannot guarantee pixel-perfect results across all email clients.</p>
 			<p>We recommend previewing your converted email in your target email client before sending. Minor visual differences in layout, spacing, fonts, or colours may occur and are outside our control.</p>
 		</section>
 
@@ -46,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
 
 		<section>
 			<h2>7. Limitation of Liability</h2>
-			<p>To the extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of this application. This includes, but is not limited to, any issues arising from differences in how converted emails render in Outlook or other email clients, or from any interaction between your Canva design and the conversion process.</p>
+			<p>To the extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of this application. This includes, but is not limited to, any issues arising from differences in how converted emails render in various email clients, or from any interaction between your Canva design and the conversion process.</p>
 			<p>Our total liability shall not exceed the amount you have paid to use this service, if any.</p>
 		</section>
 
